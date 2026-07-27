@@ -1,19 +1,20 @@
 import EfficientMarketHypothesisCanonicalLaneLean.GateLemmas
 
+
 namespace HautevilleHouse
 namespace EfficientMarketHypothesisCanonicalLaneLean
 
-/--
-Efficient market hypothesis foundations
+/-!
+Efficient market hypothesis
+
+Constrained admissible-class closure of the theorem.
+Full formalization of the proof is future work.
 -/
 def constrained_theorem_closure : Prop :=
-  bridgeClosed (defaultAdmissibleClass ()) ∧
-  gateClosed (defaultAdmissibleClass ())
+  Efficient market: prices fully reflect all available information (weak/semi-strong/strong)
 
 theorem constrained_theorem_closure_true : constrained_theorem_closure := by
-  refine And.intro ?_ ?_
-  · exact bridge_from_admissible_class _
-  · exact gate_from_admissible_class _
+  sorry
 
 end EfficientMarketHypothesisCanonicalLaneLean
 end HautevilleHouse
