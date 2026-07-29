@@ -1,13 +1,13 @@
-import EfficientMarketHypothesisCanonicalLaneLean.GateLemmas
+import HautevilleHouse.EfficientMarketHypothesisCanonicalLaneLean.BridgeLemmas
 
 namespace HautevilleHouse
 namespace EfficientMarketHypothesisCanonicalLaneLean
 
-def ConstrainedTheoremClosure (A : AdmissibleClass) : Prop :=
+def ConstrainedEMHClosure (A : AdmissibleClass) : Prop :=
   bridgeClosed A ∧ gateClosed A
 
-theorem constrained_theorem_closure (A : AdmissibleClass) :
-    ConstrainedTheoremClosure A := by
+theorem constrained_emh_endgame (A : AdmissibleClass) :
+    ConstrainedEMHClosure A := by
   exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
 
 end EfficientMarketHypothesisCanonicalLaneLean
